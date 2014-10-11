@@ -1,7 +1,3 @@
-# LOCALE!
-export LC_ALL=en_US.UTF-8  
-export LANG=en_US.UTF-8
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -61,7 +57,15 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+# Right Prompt
+export BAT_CHARGE="$HOME/.batcharge.py"
+function battery_charge {
+  echo `$BAT_CHARGE` 2>/dev/null
+}
+export RPROMPT="[%*] $(battery_charge)"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
