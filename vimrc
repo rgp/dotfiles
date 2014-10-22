@@ -21,8 +21,11 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'git://github.com/sickill/vim-monokai'
 Plugin 'sjl/gundo.vim'
 Plugin 'tComment'
+Plugin 'chreekat/vim-paren-crosshairs'
+Plugin 'scrooloose/nerdtree'
+Plugin 'git://github.com/ngmy/vim-rubocop.git'
+Plugin 'jelera/vim-javascript-syntax'
 
-" Plugin 'chreekat/vim-paren-crosshairs'
 " Plugin 'tpope/vim-surround'
 " Plugin 'git://github.com/ngmy/vim-rubocop.git'
 " Plugin 'git://github.com/scrooloose/syntastic.git'
@@ -123,9 +126,9 @@ set number                " show line numbers
 set ruler                 " Always show info along bottom.
 set t_Co=256              " enable 256-color mode.
 
-set showmatch
+" set showmatch
 set statusline=%<%f\%h%m%r%=%-20.(line=%l\ \ col=%c%V\ \ totlin=%L%)\ \ \%h%m%r%=%-40(bytval=0x%B,%n%Y%)\%P
-set visualbell
+" set visualbell
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -137,7 +140,7 @@ set visualbell
 "
 " let mapleader = ","
 "
-" nnoremap <leader>d :NERDTreeToggle<cr>
+nnoremap <leader>d :NERDTreeToggle<cr>
 " nnoremap <leader>g :GundoToggle<cr>
 "
 " " Configuracion personal

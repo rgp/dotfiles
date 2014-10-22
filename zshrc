@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
 # ZSH_THEME="gallifrey"
 ZSH_THEME="clean"
 
@@ -63,9 +63,9 @@ export LANG=en_US.UTF-8
 # Right Prompt
 export BAT_CHARGE="$HOME/.batcharge.py"
 function battery_charge {
-  echo `$BAT_CHARGE` 2>/dev/null
+  echo $BAT_CHARGE 2>/dev/null
 }
-export RPROMPT="[%*] $(battery_charge)"
+RPROMPT="[%*] \`$BAT_CHARGE 2>/dev/null\`"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
